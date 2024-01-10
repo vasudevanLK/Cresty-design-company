@@ -1,0 +1,138 @@
+
+
+/* body {
+  
+  margin: 0;
+  justify-content: center;
+  background-image: url(newpage2.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
+
+.charanimate {
+  
+  margin: 0;
+  height: 400px;
+  width: auto;
+  justify-content: center;
+  background-image: url(newpage2.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+
+*, *::before, *::after {
+  box-sizing: inherit;
+  color: inherit;
+}
+
+
+.face {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  max-width: 300px; height: 300px;
+  margin: 2em auto 0;
+  margin-top: 15%;
+  border: 1px solid rgba(100, 100, 100, .3);
+  border-radius: 50%;
+  background: linear-gradient(rgb(240, 243, 77), rgb(226, 203, 39));
+  animation: cheeks-anim 1s linear forwards 1;
+  animation-play-state: paused;
+}
+
+.face__eye {
+  position: absolute;
+  top: 15%;
+  width: 40%; height: 40%;
+  border: 1px solid rgba(100, 100, 100, .3);
+  border-radius: 50%;
+  overflow: hidden;
+  background: hsla(0, 0%, 97%, 1);
+}
+
+
+.face__eye--left {
+  left: 5%;
+}
+
+.face__eye--right {
+  right: 5%;
+}
+
+
+.face__pupil {
+  position: absolute;
+  left: 35%; top: 35%;
+  width: 30%; height: 30%;
+  border-radius: inherit;
+  background: currentcolor radial-gradient(50px 50px at center, #fff 10%, transparent 14%);
+}
+
+
+.face__mouth {
+  position: absolute;
+  left: 40%; bottom: 10%;
+  width: 20%; height: 20%;
+  background: rgba(40, 40, 40, .9);
+  border-radius: 50% 50% 20% 20%;
+  overflow: hidden;
+  transform-origin: 50% 50%;
+  transform: scaleY(.025);
+  transition: transform .3s ease-in-out;
+}
+
+.face:hover .face__mouth {
+  transform: scaleY(1);
+}
+
+.face:hover {
+  animation-play-state: running;
+}
+
+@keyframes cheeks-animation {
+  
+    0% { 
+    background: 
+   
+    linear-gradient(rgb(240, 243, 77), rgb(226, 203, 39)); }
+  
+  25% { 
+    background: 
+   
+    linear-gradient(rgb(240, 243, 77), rgb(226, 203, 39)); }
+  
+  50% { 
+    background: 
+   
+    linear-gradient(rgb(240, 243, 77), rgb(226, 203, 39)); }
+  
+  75% { 
+    background: 
+    
+    linear-gradient(rgb(240, 243, 77), rgb(226, 203, 39)); }
+  
+  100% { 
+    background: 
+   
+    linear-gradient(rgb(240, 243, 77), rgb(226, 203, 39)); }
+  
+}
+
+.face__tongue {
+    position: absolute;
+    left: 3%;
+    top: 63%;
+    width: 95%;
+    height: 40%;
+    border-radius: 40% 40% 10% 10%;
+    background-color: red;
+    background-image: rgb(170, 39, 39);
+    background-size: 100% 100%, 100% 80%;
+    background-repeat: no-repeat;
+    transform: scale(.8);
+}

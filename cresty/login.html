@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login Form</title>
+<style>
+
+.typing-text{
+  font-family:cursive ;
+    color: hotpink;
+    border-right: 1px solid hotpink;
+    font-size: 20px;
+  }
+  @keyframes typing {
+  from{
+      width:0;
+  }
+  to{
+      width: 45%;
+  }
+}
+  .typing-text{
+      display: inline-block;
+      overflow: hidden;
+      white-space: nowrap;
+      animation: typing 2s steps(30,end),75s step-end infinite;
+
+  }
+  
+
+  body {
+    font-family: Arial, sans-serif;
+    background-image: url(newpage2.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  h2{
+    color: green;
+  }
+
+  .login-container {
+    background:linear-gradient(25 deg,green,black);
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width:400px;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: aliceblue;
+  }
+
+  .form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid green;
+    border-radius: 5px;
+  }
+
+  .form-group button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    width: 100%;
+  }
+  .form-group button:hover {
+    background-color: rgb(0, 165, 0);
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    padding: 15px 20px;
+    cursor: pointer;
+    width: 100%;
+  }
+  typing-text{
+    margin-top: 0;
+
+  }
+  
+</style>
+</head>
+<body>
+  
+  <div class="login-container">
+    <div class="typing-text">CRESTY DESIGNS </div>
+    <h2>Login</h2>
+    <form id="loginForm">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" placeholder="fullname" required>
+      </div>
+      <div class="form-group">
+        <label for="gmail">gmail</label>
+        <input type="gmail" id="password" name="password" placeholder="user1@gmail.com" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="use strong pass" required>
+      </div>
+      <div class="form-group">
+        <button type="submit">Login</button>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    const loginForm = document.getElementById('loginForm');
+    loginForm.addEventListener('submit', function(event) {
+      event.preventDefault();
+      const username = loginForm.username.value;
+      const password = loginForm.password.value;
+
+      // Here you can add your authentication logic
+      // For the sake of this example, let's just show an alert
+      alert(`Logged in with Username: ${username}`);
+    });
+  </script>
+</body>
+</html>
